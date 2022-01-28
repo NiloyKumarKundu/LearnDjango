@@ -7,18 +7,7 @@
 <div class="container">
     <form action="{% url 'contact' %}" method="POST">
         {% csrf_token %}
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Name</label>
-            <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Phone</label>
-            <input type="text" name="phone" class="form-control" id="exampleFormControlInput1" placeholder="Your Phone">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Details</label>
-            <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
+        {{ form }}
         <button type="submit" class="btn btn-success">Submit</button>
     </form>
 </div>
